@@ -46,7 +46,7 @@ class RaveApi
     private function postApiRequest($method, array $params = [])
     {
         $url = $this->url.$method;
-        
+
         $ch = curl_init();
 
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -55,13 +55,35 @@ class RaveApi
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 200);
         curl_setopt($ch, CURLOPT_TIMEOUT, 200);
-    
-        $headers = array('Content-Type: application/json');
+
+        $headers = array(
+            'Content-Type: application/json',
+            "Authorization: Bearer $this->secret_key");
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-    
+
         $request = curl_exec($ch);
         $data = json_decode($request);
-        
+
+        return new RaveResponse($data);
+    }
+
+    private function getApiRequest($method)
+    {
+        $url = $this->url.$method;
+
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 200);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 200);
+
+        $headers = array("Authorization: Bearer $this->secret_key");
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        $request = curl_exec($ch);
+        $data = json_decode($request);
+
         return new RaveResponse($data);
     }
 
@@ -73,7 +95,7 @@ class RaveApi
      */
     public function buildPayment($params)
     {
-        return $this->postApiRequest('/flwv3-pug/getpaidx/api/v2/hosted/pay', $params);
+        return $this->postApiRequest('/v3/payments', $params);
     }
 
 
@@ -81,10 +103,10 @@ class RaveApi
      * Validate this payment.
      *
      * @param string $reference The unique reference code for this payment
-     * @return stdClass An object containing the api response
+     * @return RaveResponse
      */
-    public function checkPayment($verifyParams)
+    public function checkPayment($id)
     {
-        return $this->postApiRequest('/flwv3-pug/getpaidx/api/v2/verify', $verifyParams);
+        return $this->getApiRequest("/v3/transactions/$id/verify");
     }
 }

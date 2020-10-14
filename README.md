@@ -69,3 +69,16 @@ otp: 12345
 ```
 
 > Contact [hi@flutterwavego.com](hi@flutterwavego.com) if you have any issues.
+
+{
+			"name": "Emmajiugo",
+			"url": "http://www.github.com/emmajiugo"
+		},
+		{
+			"name": "&",
+			"url": ""
+		},
+		{
+			"name": "Uchenna",
+			"url": "http://www.github.com/wisecyril"
+		}

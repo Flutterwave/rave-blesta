@@ -1,21 +1,13 @@
 {
 	"version": "1.0.2",
-	"name": "Rave by Flutterwave",
-	"description": "Supports: Credit Cards, Bank Account, Mobile Money, Barter.",
+	"name": "Flutterwave Standard",
+	"description": "The easiest way to make and accept payments from customers anywhere in the world.",
 	"authors": [
 		{
-			"name": "Emmajiugo",
-			"url": "http://www.github.com/emmajiugo"
-		},
-		{
-			"name": "&",
-			"url": ""
-		},
-		{
-			"name": "Uchenna",
-			"url": "http://www.github.com/wisecyril"
+			"name": "Flutterwave Developers",
+			"url": "https://www.flutterwave.com"
 		}
 	],
 	"currencies": ["NGN", "USD", "EUR", "GBP", "UGX", "TZS", "ZAR", "GHS", "KES"],
-	"signup_url": "https://rave.flutterwave.com"
+	"signup_url": "https://dashboard.flutterwave.com"
 }

@@ -1,6 +1,6 @@
 <?php
 // Gateway name
-$lang['Rave.name'] = "Rave";
+$lang['Rave.name'] = "Flutterwave";
 
 // Settings
 $lang['Rave.live_public_key'] = 'Live Public Key';
@@ -11,7 +11,7 @@ $lang['Rave.live_mode'] = 'Live Mode';
 $lang['Rave.key_note'] = 'Enable the check box to go "Live".';
 
 // Process form
-$lang['Rave.buildprocess.submit'] = "Pay with Rave";
+$lang['Rave.buildprocess.submit'] = "Pay with Flutterwave";
 
 // Errors
 $lang['Rave.!error.live_mode.valid'] = 'Live mode must be set to "true" if given.';
