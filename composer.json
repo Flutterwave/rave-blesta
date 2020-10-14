@@ -1,6 +1,6 @@
 {
-    "name": "blesta/rave",
-    "description": "Rave Payment Gateway",
+    "name": "blesta/flutterwave",
+    "description": "Flutterwave Payment Gateway",
     "license": "proprietary",
     "type": "blesta-gateway-nonmerchant",
     "require": {

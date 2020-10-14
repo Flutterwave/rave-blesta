@@ -1,84 +1,54 @@
-# Rave Blesta Plugin #
+<p align="center">
+    <img title="Flutterwave" height="200" src="https://flutterwave.com/images/logo-colored.svg" width="50%"/>
+</p>
 
-This is a payment Module for BLESTA that allows you to accept payments using Rave By Flutterwave
+# Flutterwave Blesta Plugin #
 
-## Requirements ##
+This is a payment Module for Blesta that allows you to accept payments using Flutterwave. Accept Credit card, Debit card, Mobile Money, Pay with Barter and Bank account payment directly on Blesta with the Rave payment gateway. 
 
-* Blesta installation.
-* Rave Account
+Flutterwave is available in: **Nigeria, Ghana, Kenya, Uganda, Rwanda, South Africa, United States** and 90+ Countries. Sign up for an account here
+
+## Getting Started ##
+
+These instructions will get you a copy of the plugin up and running on your local machine for development and production purposes.
+
+### Prerequisites ###
+
+* Blesta installation and setup.
+* Flutterwave Account
 * PHP 5.2.0 or greater
 * Blesta 3.0.0 or greater
 
-## Description ##
 
-Accept Credit card, Debit card, Mobile Money, Pay with Barter and Bank account payment directly on Blesta with the Rave payment gateway.
-
-Signup for a Live account [here](https://rave.flutterwave.com)
-Signup for a Test account [here](https://ravesandbox.flutterwave.com)
-
-Rave is available in:
-
-* __Nigeria__
-* __Ghana__
-* __Kenya__
-* __South Africa__
-* __Uganda__
-* __Tanzania__
-* __USA__
-
-## Install ##
+### Installing ###
 
 1. Download plugin.
 
-2. Unpack all files from ```Blesta-rave-gateway``` plugin, extract the content into ```blesta\components\gateways\nonmerchant``` folder of your Blesta installation and rename the folder to ```rave```.
+2. Unpack all files from ```blesta-rave-gateway``` plugin, extract the content into ```blesta\components\gateways\nonmerchant``` folder of your Blesta installation and rename the folder to ```rave```.
 
 3. In your Blesta Admin Dashboard, click ```Settings``` on the top right navigation and choose ```Payment Gateways```.![Rave Installation Screenshot](views/default/images/admin.png)
 
-4. choose **Available** from ```Payment Gateways``` section, it will list all available gateways. ![Rave Installation Screenshot](views/default/images/Available_gateway.png)
+4. Choose **Available** from ```Payment Gateways``` section, it will list all available gateways. ![Rave Installation Screenshot](views/default/images/Available_gateway.png)
 
 5. Scroll to ```Rave``` and click on the **Install** button. ![Rave Installation Screenshot](views/default/images/Rave.png)
 
-6. Configure your account by filling all the fields. ![Rave Installation Screenshot](views/default/images/configure_rave.png)
 
-  >Your ```Public and Secret Keys``` can be found in your [Rave dashboard](https://support.flutterwave.com/article/138-my-api-keys). Do not forget to check the checkbox for Live transaction.
+### Configuration ###
+
+Configure your account by filling all the fields. <p>![Rave Installation Screenshot](views/default/images/configure_rave.png)</p>
+
+  >Your ```Public and Secret Keys``` can be found in your [Flutterwave dashboard](https://support.flutterwave.com/article/138-my-api-keys). Do not forget to check the checkbox for you are about to go Live.
 
 
->Test Card
+## Credits ##
 
-```bash
-5438898014560229
-cvv 564
-Expiry Month 10
-Expiry Year 20
-Pin 3310
-otp 12345
-```
+ * [Emma Ugo](https://github.com/emmajiugo)
+ * [Uchenna](https://github.com/emmajiugo)
 
->Test Bank Account
 
-```bash
-Access Bank
-Account number: 0690000004
-otp: 12345
-```
+## Issues
 
-```bash
-Providus Bank
-Account number: 5900102340, 5900002567
-otp: 12345
-```
+For issues, suggestions and feature request, [click here](https://github.com/Flutterwave/rave-blesta/issues).
+To contribute, fork the repo, add your changes and modifications, then create a pull request.
 
-> Contact [hi@flutterwavego.com](hi@flutterwavego.com) if you have any issues.
-
-{
-			"name": "Emmajiugo",
-			"url": "http://www.github.com/emmajiugo"
-		},
-		{
-			"name": "&",
-			"url": ""
-		},
-		{
-			"name": "Uchenna",
-			"url": "http://www.github.com/wisecyril"
-		}
+Copyright (c) 2020, Flutterwave Developers
